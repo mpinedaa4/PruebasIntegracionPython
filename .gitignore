@@ -1,0 +1,83 @@
+# -------------------------------------
+# Archivos de Python
+# -------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+
+# Archivos compilados
+*.so
+
+# -------------------------------------
+# Entornos virtuales
+# -------------------------------------
+.venv/
+venv/
+ENV/
+env/
+
+# -------------------------------------
+# Herramientas de pruebas
+# -------------------------------------
+
+# pytest cache
+.pytest_cache/
+
+# Coverage files
+.coverage
+coverage.xml
+htmlcov/
+
+# Logs
+*.log
+
+# -------------------------------------
+# Base de datos (SQLite)
+# -------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.sqlite-journal
+
+# -------------------------------------
+# Archivos de editor / IDE
+# -------------------------------------
+
+# VS Code
+.vscode/
+.settings/
+
+# PyCharm / IntelliJ
+.idea/
+*.iml
+
+# -------------------------------------
+# Codespaces / Devcontainers
+# -------------------------------------
+.devcontainer/ # (Opcional; mantenlo si quieres versionarlo)
+*.code-workspace
+
+# Docker (por si llegas a agregarlo)
+*.dockerfile
+*.env
+
+# -------------------------------------
+# Archivos del proyecto que NO deben versionarse
+# -------------------------------------
+
+# Artefactos generados automáticamente
+*.tmp
+*.temp
+*.bak
+
+# Archivos comprimidos
+*.zip
+*.tar
+*.tar.gz
+
+# Mac OS
+.DS_Store
