@@ -10,11 +10,12 @@ def test_user_service_with_sqlite_in_memory():
         """
         CREATE TABLE users (
             id INTEGER PRIMARY KEY,
-            first TEXT,
+            first TEXT NOT NULL,
             last  TEXT
         );
         INSERT INTO users (id, first, last) VALUES (1, 'Ada', 'Lovelace');
         INSERT INTO users (id, first, last) VALUES (2, 'Alan', 'Turing');
+        INSERT INTO users (id, last) VALUES (3, 'Pineda');
         """
     )
     conn.commit()
@@ -25,3 +26,8 @@ def test_user_service_with_sqlite_in_memory():
     assert service.get_full_name(1) == "Ada Lovelace"
     assert service.get_full_name(2) == "Alan Turing"
     assert service.get_full_name(999) is None
+
+    """
+    Con el constraint, si se inserta un usuario sin first name la prueba saca error
+    porque se está violando el constraint
+    """
